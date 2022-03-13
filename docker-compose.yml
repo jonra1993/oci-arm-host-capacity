@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  composer_container:
+    container_name: composer_container
+    restart: 'no'
+    image: composer:1.10
+    command: install
+    ports:
+      - "9001:9000"
+    volumes:
+      - .:/app
